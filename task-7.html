@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-7</title>
+    <style>
+        body{
+            font-size: 25px;
+
+        }
+        #btn{
+            padding: 20px;
+            padding: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label for="number">Enter a number: </label>
+    <input type="text" name="number" id="val"><br><br>
+    <button id="btn" onclick="rev()">Reverse</button>
+    <h3 id="result"></h3>
+    <script>
+        function rev()
+        {
+            let values = document.getElementById("val").value;
+            console.log(values);
+            let rev_num = 0;
+            while(values != 0)
+            {
+                var a = values%10;
+                rev_num = rev_num*10 + a;
+                values = Math.floor(values/10);
+            }
+            console.log(rev_num);
+
+            document.getElementById("result").innerHTML = "the reverse number is: " + rev_num;
+        }
+    </script>
+</body>
+</html>

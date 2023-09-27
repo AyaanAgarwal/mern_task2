@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-9</title>
+</head>
+
+<body>
+    <label for="one">Enter first Number: </label>
+    <input type="text" name="one" id="one"><br><br>
+    <label for="sec">Enter first Number: </label>
+    <input type="text" name="sec" id="sec"><br><br>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+    <h2 id="res"></h2>
+    <script>
+        ;
+        function mul() {
+            let first = document.getElementById("one").value;
+            let sec = document.getElementById("sec").value
+            let result = 0;
+
+            result = first * sec;
+            document.getElementById("res").innerHTML = "The Result is:<br>" + result;
+        }
+        function div() {
+            let first = document.getElementById("one").value;
+            let sec = document.getElementById("sec").value
+            let result = 0;
+
+            result = first / sec;
+            document.getElementById("res").innerHTML = "The Result is:<br>" + result;
+        }
+
+    </script>
+
+</body>
+
+</html>

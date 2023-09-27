@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-10</title>
+</head>
+
+<body>
+    <button onclick="show_date()">show date</button><br>
+    <h2 id="date"></h2>
+    <button onclick="show_time()">Show time</button><br>
+    <h2 id="time"></h2>
+    <script>
+        function show_date() {
+            let d = new Date();
+            let dd = d.getDate();
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            let mm = months[d.getMonth()];
+            let year = d.getFullYear();
+            let date = dd + "/" + mm + "/" + year;
+            document.getElementById("date").innerHTML = date;
+        }
+        function show_time() {
+            const d = new Date();
+            document.getElementById("time").innerHTML = d;
+        }
+    </script>
+</body>
+
+</html>
